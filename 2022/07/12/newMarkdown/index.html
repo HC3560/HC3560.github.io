@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://hanqingjiang.com/img/newMarkdown_4.png">
 <meta property="og:image" content="https://hanqingjiang.com/img/newMarkdown_5.png">
 <meta property="article:published_time" content="2022-07-12T14:48:01.000Z">
-<meta property="article:modified_time" content="2022-08-08T15:47:27.467Z">
+<meta property="article:modified_time" content="2022-08-09T13:21:22.433Z">
 <meta property="article:author" content="青江的个人站">
 <meta property="article:tag" content="小技巧">
 <meta name="twitter:card" content="summary">
@@ -193,12 +193,12 @@
         <p>Typora是一个非常好用的Markdown编辑器，但新建文件的时候可能需要先新建一个其他类型的文件，然后将后缀改为<code>.md</code>，比较麻烦。可以通过以下方法将右键菜单<code>新建</code>的选项中添加Markdown文件。</p>
 <span id="more"></span>
 
-<h4 id="确认程序运行的名字"><a href="#确认程序运行的名字" class="headerlink" title="确认程序运行的名字"></a>确认程序运行的名字</h4><p>1.以管理员身份打开注册表编辑器<code>regedit</code></p>
+<h2 id="确认程序运行的名字"><a href="#确认程序运行的名字" class="headerlink" title="确认程序运行的名字"></a>确认程序运行的名字</h2><p>1.以管理员身份打开注册表编辑器<code>regedit</code></p>
 <p>2.在<code>计算机\HKEY_CLASSES_ROOT</code>单击右键，选择<code>查找</code>，输入<code>Typora</code>，<code>项</code>勾选，<code>值</code>和<code>数据</code>取消勾选，然后单击<code>查找下一个</code>，如下图所示：</p>
 <p><img src="/../img/newMarkdown_1.png" alt="newMarkdown_1"></p>
 <p><img src="/../img/newMarkdown_2.png" alt="newMarkdown_2"></p>
 <p>这里我们确认了程序运行的名字为<code>Typora.exe</code>这个名称。</p>
-<h4 id="创建reg文件导入注册表"><a href="#创建reg文件导入注册表" class="headerlink" title="创建reg文件导入注册表"></a>创建<code>reg</code>文件导入注册表</h4><p>1.在桌面（任意位置都可以）上创建<code>Markdown.reg</code>文件，文件内容如下所示：</p>
+<h2 id="创建reg文件导入注册表"><a href="#创建reg文件导入注册表" class="headerlink" title="创建reg文件导入注册表"></a>创建<code>reg</code>文件导入注册表</h2><p>1.在桌面（任意位置都可以）上创建<code>Markdown.reg</code>文件，文件内容如下所示：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line">[HKEY_CLASSES_ROOT\.md]</span><br><span class="line">@=&quot;Typora.exe&quot;</span><br><span class="line">[HKEY_CLASSES_ROOT\.md\ShellNew]</span><br><span class="line">&quot;NullFile&quot;=&quot;&quot;</span><br><span class="line">[HKEY_CLASSES_ROOT\Typora.exe]</span><br><span class="line">@=&quot;Markdown&quot;</span><br></pre></td></tr></table></figure>
 
 <p>代码说明：</p>
@@ -208,10 +208,10 @@
 <p>2.双击<code>Markdown.reg</code>文件导入注册表，如下图所示：</p>
 <p><img src="/../img/newMarkdown_3.png" alt="newMarkdown_3"></p>
 <p>保存文件后，双击运行，修改注册表即可，然后刷新桌面，现在右键即可达到预期效果，如果不行，请重启一下电脑。</p>
-<h4 id="刷新桌面"><a href="#刷新桌面" class="headerlink" title="刷新桌面"></a>刷新桌面</h4><p>在导入操作完成之后，刷新桌面，然后查看鼠标右键新建，如下图所示：</p>
+<h2 id="刷新桌面"><a href="#刷新桌面" class="headerlink" title="刷新桌面"></a>刷新桌面</h2><p>在导入操作完成之后，刷新桌面，然后查看鼠标右键新建，如下图所示：</p>
 <p><img src="/../img/newMarkdown_4.png" alt="newMarkdown_4"></p>
 <p>说明我们创建成功了。</p>
-<h4 id="编辑新建图标-非必须"><a href="#编辑新建图标-非必须" class="headerlink" title="编辑新建图标(非必须)"></a>编辑新建图标(非必须)</h4><p>1.以 <code>Typora</code> 为例，在注册表 <code>Typora.exe</code> 下点击 <code>DefaultIcon</code> 然后在右侧的 <code>默认</code> 进行右键单击选择 <code>修改</code>，如下图所示：</p>
+<h2 id="编辑新建图标-非必须"><a href="#编辑新建图标-非必须" class="headerlink" title="编辑新建图标(非必须)"></a>编辑新建图标(非必须)</h2><p>1.以 <code>Typora</code> 为例，在注册表 <code>Typora.exe</code> 下点击 <code>DefaultIcon</code> 然后在右侧的 <code>默认</code> 进行右键单击选择 <code>修改</code>，如下图所示：</p>
 <p><img src="/../img/newMarkdown_5.png" alt="newMarkdown_5"></p>
 <p>2.将属性修改为想要设置的Markdown文件图标即可。</p>
 <p>本文为转载，以下是文章的出处和版权声明：</p>
@@ -466,11 +466,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小技巧</a>
+                <a href="javascript:void(0)" class="js-tag color1">新年快乐！</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">新年快乐！</a>
+                <a href="javascript:void(0)" class="js-tag color4">小技巧</a>
               </li>
              
               <li class="article-tag-list-item">

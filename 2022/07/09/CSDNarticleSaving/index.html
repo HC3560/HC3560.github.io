@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://hanqingjiang.com/img/CSDN_2.png">
 <meta property="og:image" content="https://hanqingjiang.com/img/CSDN_3.png">
 <meta property="article:published_time" content="2022-07-09T13:35:33.000Z">
-<meta property="article:modified_time" content="2022-08-08T15:46:27.317Z">
+<meta property="article:modified_time" content="2022-08-09T13:18:58.675Z">
 <meta property="article:author" content="青江的个人站">
 <meta property="article:tag" content="小技巧">
 <meta name="twitter:card" content="summary">
@@ -191,14 +191,11 @@
         <p>想要保存CSDN里面的文章，可以通过以下方法直接将文章保存为PDF并输出，输出结果简洁，阅读舒适，效果非常好。</p>
 <span id="more"></span>
 
-<p><strong>使用方法：</strong>在需要保存的CSDN页面按<code>F12</code>进入开发者工具，将以下<code>js</code>复制到<code>console</code>，回车即可一键打印。 </p>
+<h2 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h2><p>在需要保存的CSDN页面按<code>F12</code>进入开发者工具，将以下<code>js</code>复制到<code>console</code>，回车即可一键打印。 </p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span> <span class="title function_">doPrint</span>(<span class="params"></span>)&#123;      </span><br><span class="line">	<span class="string">&#x27;use strict&#x27;</span>;</span><br><span class="line">	<span class="keyword">var</span> articleBox = $(<span class="string">&quot;div.article_content&quot;</span>);</span><br><span class="line">	articleBox.<span class="title function_">removeAttr</span>(<span class="string">&quot;style&quot;</span>);</span><br><span class="line">	<span class="keyword">var</span> head_str = <span class="string">&quot;&quot;</span>;       </span><br><span class="line">	<span class="keyword">var</span> foot_str = <span class="string">&quot;&quot;</span>;   </span><br><span class="line">	<span class="keyword">var</span> older = <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">innerHTML</span>;       </span><br><span class="line">	<span class="keyword">var</span> title= <span class="variable language_">document</span>.<span class="title function_">getElementsByClassName</span>(<span class="string">&#x27;article-title-box&#x27;</span>)[<span class="number">0</span>].<span class="property">innerHTML</span>; </span><br><span class="line">	<span class="keyword">var</span> main_body = <span class="variable language_">document</span>.<span class="title function_">getElementsByClassName</span>(<span class="string">&#x27;article_content&#x27;</span>)[<span class="number">0</span>].<span class="property">innerHTML</span>;</span><br><span class="line">	<span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">innerHTML</span> = head_str + title + main_body + foot_str;</span><br><span class="line">	$(<span class="string">&quot;#mainBox&quot;</span>).<span class="title function_">width</span>(<span class="string">&quot;100%&quot;</span>);</span><br><span class="line">	<span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&#x27;body&#x27;</span>)[<span class="number">0</span>].<span class="property">style</span>.<span class="property">zoom</span>=<span class="number">0.8</span>;     </span><br><span class="line">	<span class="variable language_">window</span>.<span class="title function_">print</span>();</span><br><span class="line">	<span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">innerHTML</span> = older;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 
-<p><strong>一些问题：</strong></p>
-<p>1.保存为PDF。将打印机改成“另存为PDF”即可。</p>
-<p><img src="/../img/CSDN_1.png" alt="CSDN_1"></p>
-<p>2.更多设置</p>
-<p>（1）有的文章页边缘的字会被剪切掉一部分。</p>
+<h2 id="一些问题："><a href="#一些问题：" class="headerlink" title="一些问题："></a>一些问题：</h2><h4 id="1-保存为PDF。将打印机改成“另存为PDF”即可。"><a href="#1-保存为PDF。将打印机改成“另存为PDF”即可。" class="headerlink" title="1.保存为PDF。将打印机改成“另存为PDF”即可。"></a>1.保存为PDF。将打印机改成“另存为PDF”即可。</h4><p><img src="/../img/CSDN_1.png" alt="CSDN_1"></p>
+<h4 id="2-更多设置"><a href="#2-更多设置" class="headerlink" title="2.更多设置"></a>2.更多设置</h4><p>（1）有的文章页边缘的字会被剪切掉一部分。</p>
 <ul>
 <li>“边距”选择“无”即可解决。</li>
 <li>使用缩放（例如设置“80%”），把整体缩小就不会超过页面了。</li>
@@ -467,11 +464,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小技巧</a>
+                <a href="javascript:void(0)" class="js-tag color1">新年快乐！</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">新年快乐！</a>
+                <a href="javascript:void(0)" class="js-tag color4">小技巧</a>
               </li>
              
               <li class="article-tag-list-item">
