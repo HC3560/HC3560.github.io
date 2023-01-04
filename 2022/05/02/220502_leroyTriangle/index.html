@@ -6,24 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://hanqingjiang.com">
-  <title>CSDN文章保存 | 青江的个人站</title>
+  <title>自平衡莱洛三角复刻记录 | 青江的个人站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="想要保存CSDN里面的文章，可以通过以下方法直接将文章保存为PDF并输出，输出结果简洁，阅读舒适，效果非常好。">
+  <meta name="description" content="前言前段时间在b站上看到自平衡莱洛三角的视频： 基于LQR控制器的自平衡莱洛三角形_哔哩哔哩_bilibili 以及45°大佬的复刻视频： 【开源】百元内可自制的自平衡莱洛三角形_哔哩哔哩_bilibili 【开源】自平衡莱洛三角形V2 | 我加了RGB性能翻倍_哔哩哔哩_bilibili 于是突然就有了自己也想拥有一个的想法，这样一个神奇的，还带炫酷RGB的玩意哪个男孩看了不会心动呢！ 对不起了">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSDN文章保存">
-<meta property="og:url" content="https://hanqingjiang.com/2022/07/09/220709_CSDNarticleSaving/index.html">
+<meta property="og:title" content="自平衡莱洛三角复刻记录">
+<meta property="og:url" content="https://hanqingjiang.com/2022/05/02/220502_leroyTriangle/index.html">
 <meta property="og:site_name" content="青江的个人站">
-<meta property="og:description" content="想要保存CSDN里面的文章，可以通过以下方法直接将文章保存为PDF并输出，输出结果简洁，阅读舒适，效果非常好。">
+<meta property="og:description" content="前言前段时间在b站上看到自平衡莱洛三角的视频： 基于LQR控制器的自平衡莱洛三角形_哔哩哔哩_bilibili 以及45°大佬的复刻视频： 【开源】百元内可自制的自平衡莱洛三角形_哔哩哔哩_bilibili 【开源】自平衡莱洛三角形V2 | 我加了RGB性能翻倍_哔哩哔哩_bilibili 于是突然就有了自己也想拥有一个的想法，这样一个神奇的，还带炫酷RGB的玩意哪个男孩看了不会心动呢！ 对不起了">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://hanqingjiang.com/img/220709_CSDNarticleSaving/1.png">
-<meta property="og:image" content="https://hanqingjiang.com/img/220709_CSDNarticleSaving/2.png">
-<meta property="og:image" content="https://hanqingjiang.com/img/220709_CSDNarticleSaving/3.png">
-<meta property="article:published_time" content="2022-07-09T13:35:33.000Z">
-<meta property="article:modified_time" content="2023-01-04T04:30:07.158Z">
+<meta property="og:image" content="https://hanqingjiang.com/img/220502_leroyTriangle/1.png">
+<meta property="og:image" content="https://hanqingjiang.com/img/220502_leroyTriangle/2.png">
+<meta property="og:image" content="https://hanqingjiang.com/img/220502_leroyTriangle/3.png">
+<meta property="og:image" content="https://hanqingjiang.com/img/220502_leroyTriangle/4.png">
+<meta property="og:image" content="https://hanqingjiang.com/img/220502_leroyTriangle/5.png">
+<meta property="article:published_time" content="2022-05-02T12:54:32.000Z">
+<meta property="article:modified_time" content="2023-01-04T07:45:36.780Z">
 <meta property="article:author" content="青江的个人站">
-<meta property="article:tag" content="小技巧">
+<meta property="article:tag" content="复刻">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://hanqingjiang.com/img/220709_CSDNarticleSaving/1.png">
+<meta name="twitter:image" content="https://hanqingjiang.com/img/220502_leroyTriangle/1.png">
   
     <link rel="alternative" href="/atom.xml" title="青江的个人站" type="application/atom+xml">
   
@@ -165,46 +167,67 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-220709_CSDNarticleSaving" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-220502_leroyTriangle" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      CSDN文章保存
+      自平衡莱洛三角复刻记录
     </h1>
   
 
         
-        <a href="/2022/07/09/220709_CSDNarticleSaving/" class="archive-article-date">
-  	<time datetime="2022-07-09T13:35:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
+        <a href="/2022/05/02/220502_leroyTriangle/" class="archive-article-date">
+  	<time datetime="2022-05-02T12:54:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-02</time>
 </a>
         
       </header>
 <div align="center" class="post-count">
-字数：328字 | 预计阅读时长：1分钟
+字数：2.5k字 | 预计阅读时长：8分钟
 </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>想要保存CSDN里面的文章，可以通过以下方法直接将文章保存为PDF并输出，输出结果简洁，阅读舒适，效果非常好。</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>前段时间在b站上看到自平衡莱洛三角的视频：</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV19v411n7mN/">基于LQR控制器的自平衡莱洛三角形_哔哩哔哩_bilibili</a></p>
+<p>以及45°大佬的复刻视频：</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1b3411x7za/">【开源】百元内可自制的自平衡莱洛三角形_哔哩哔哩_bilibili</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ei4y1r7Rv/">【开源】自平衡莱洛三角形V2 | 我加了RGB性能翻倍_哔哩哔哩_bilibili</a></p>
+<p>于是突然就有了自己也想拥有一个的想法，这样一个神奇的，还带炫酷RGB的玩意哪个男孩看了不会心动呢！</p>
+<p>对不起了钱包，我真的需要这个酷酷的东西！！！</p>
 <span id="more"></span>
 
-<h2 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h2><p>在需要保存的CSDN页面按<code>F12</code>进入开发者工具，将以下<code>js</code>复制到<code>console</code>，回车即可一键打印。 </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span> <span class="title function_">doPrint</span>(<span class="params"></span>)&#123;      </span><br><span class="line">	<span class="string">&#x27;use strict&#x27;</span>;</span><br><span class="line">	<span class="keyword">var</span> articleBox = $(<span class="string">&quot;div.article_content&quot;</span>);</span><br><span class="line">	articleBox.<span class="title function_">removeAttr</span>(<span class="string">&quot;style&quot;</span>);</span><br><span class="line">	<span class="keyword">var</span> head_str = <span class="string">&quot;&quot;</span>;       </span><br><span class="line">	<span class="keyword">var</span> foot_str = <span class="string">&quot;&quot;</span>;   </span><br><span class="line">	<span class="keyword">var</span> older = <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">innerHTML</span>;       </span><br><span class="line">	<span class="keyword">var</span> title= <span class="variable language_">document</span>.<span class="title function_">getElementsByClassName</span>(<span class="string">&#x27;article-title-box&#x27;</span>)[<span class="number">0</span>].<span class="property">innerHTML</span>; </span><br><span class="line">	<span class="keyword">var</span> main_body = <span class="variable language_">document</span>.<span class="title function_">getElementsByClassName</span>(<span class="string">&#x27;article_content&#x27;</span>)[<span class="number">0</span>].<span class="property">innerHTML</span>;</span><br><span class="line">	<span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">innerHTML</span> = head_str + title + main_body + foot_str;</span><br><span class="line">	$(<span class="string">&quot;#mainBox&quot;</span>).<span class="title function_">width</span>(<span class="string">&quot;100%&quot;</span>);</span><br><span class="line">	<span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&#x27;body&#x27;</span>)[<span class="number">0</span>].<span class="property">style</span>.<span class="property">zoom</span>=<span class="number">0.8</span>;     </span><br><span class="line">	<span class="variable language_">window</span>.<span class="title function_">print</span>();</span><br><span class="line">	<span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">innerHTML</span> = older;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<h2 id="一些问题："><a href="#一些问题：" class="headerlink" title="一些问题："></a>一些问题：</h2><h4 id="1-保存为PDF。将打印机改成“另存为PDF”即可。"><a href="#1-保存为PDF。将打印机改成“另存为PDF”即可。" class="headerlink" title="1.保存为PDF。将打印机改成“另存为PDF”即可。"></a>1.保存为PDF。将打印机改成“另存为PDF”即可。</h4><p><img src="/../img/220709_CSDNarticleSaving/1.png" alt="1"></p>
-<h4 id="2-更多设置"><a href="#2-更多设置" class="headerlink" title="2.更多设置"></a>2.更多设置</h4><p>（1）有的文章页边缘的字会被剪切掉一部分。</p>
-<ul>
-<li>“边距”选择“无”即可解决。</li>
-<li>使用缩放（例如设置“80%”），把整体缩小就不会超过页面了。</li>
-</ul>
-<p><img src="/../img/220709_CSDNarticleSaving/2.png" alt="2"></p>
-<p>（2）可以关闭页眉页脚等。</p>
-<p><img src="/../img/220709_CSDNarticleSaving/3.png" alt="3"></p>
-<p>本文为转载，以下是文章的出处和版权声明：</p>
-<p>————————————————<br>版权声明：本文为CSDN博主「丨匿名用户丨」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/p1279030826/article/details/106602341">https://blog.csdn.net/p1279030826/article/details/106602341</a></p>
+<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><p>前期的准备工作还是比较漫长的，大概花了一个多月的时间。我在此之前几乎没有接触过焊接，也没有进入学校的实验室，因此焊接所需要的设备与材料都需要从零开始准备，需要了解学习的相关知识也比较多且杂。</p>
+<p>不过幸运的是，45°大佬将复现后的三角开源，并建立了交流群，里面有很多电子爱好者回答初学者的各种问题，对复刻有很大的帮助，群文件里面也有大佬们编写整理的很详细的硬件学习资料与小三角制作的教程，让很多初学者的学习过程有了指引，制作时候通过仔细阅读文档也可以避免踩到很多坑。</p>
+<p>这次复刻的是45°大佬的莱洛三角形V2开源方案，其中涉及到的软硬件相关知识以后再慢慢学习。</p>
+<p><a target="_blank" rel="noopener" href="https://oshwhub.com/45coll/zi-ping-heng-di-lai-luo-san-jiao_10-10-ban-ben_copy">莱洛三角V2-esp32-无刷驱动EG2133 - 嘉立创EDA开源硬件平台 (oshwhub.com)</a></p>
+<p><strong>第一个就是每天翻看群消息。</strong>有很多初学者会提很多问题，有很多大佬也会耐心地进行解答，其中一些有意义的问题我都会记录下来，万一我以后也遇到同样的问题就知道如何解决了。在大概一个月的时间里，通过每天的记录，我学到了很多相关知识，对于后面的焊接物料与设备的购买更加熟悉，对实际焊接与组装也了解了很多技巧与需要注意的地方。</p>
+<p><strong>第二个就是复刻涉及到的物料准备。</strong>包括PCB板、元器件、连接件、无刷电机、螺丝螺母等，这些参照群文件里的详细的物料表与BOM表即可。总的来说，搞硬件还是比较麻烦的，除了需要学习各种细碎的硬件知识和技能，还得时刻关注硬件市场，找到合适的购买时机。像元器件的价格与库存数量每天就在不断的变化，比如在立创商城购买元器件，很有可能今天这个元器件缺货，明天那个元器件缺货，这种时候还需要在淘宝上找替代品，有时候淘宝上元器件的质量也没办法保证，不过熟悉了之后就会得心应手了。</p>
+<blockquote>
+<p>后续补充：我使用的电机方案是原方案的2715电机，当时还能勉强以十几元的价格买到。</p>
+<p>原V2方案使用的2715电机性能很好，摇摆平衡的成功率非常高，但是由于群友的热情购买，而且该电机是昊翔倒闭之后流出的库存，本来就存在断货的风险，目前该电机的价格已经从10元左右涨到百元级别且不发货，属实离谱。</p>
+<p>为后续群友们可以在不用修改主控方案的前提下顺利复刻，群内的“虫二”大佬推出了使用3205电机无限位款代替的解决方案，这款电机是小米云台稳定器停产后流出的，库存大约2W个，2022年7月份时售价3.5元，暂时价格不会有太大的变化。具体实现可以参考开源链接：</p>
+<p><a target="_blank" rel="noopener" href="https://oshwhub.com/chong2/motor3205">自平衡莱洛三角形V2电机无货的解决方案 - 嘉立创EDA开源硬件平台 (oshwhub.com)</a></p>
+</blockquote>
+<p><strong>第三个是焊接所需要的设备与各种消耗品的准备。</strong>包括加热台、热风枪、电烙铁、焊锡丝、焊锡膏、助焊剂、洗板水、热熔胶、高温胶带、绝缘胶带等等，所需要的东西在群文件中虽然有一部分，但还是要根据自己的需求进行购买，需要对设备有一定的了解才会比较方便。比如加热台与热风枪不一定都需要，加热台可以一次对板子的单面进行回流焊，对单面焊接非常方便；热风枪可以对局部的地方进行加热，对局部的焊接或不能使用加热台的背面焊接比较方便，我为了焊接的方便，两个都购买了，不得不说焊接过程中确实帮了我很大的忙。</p>
+<p>初学者要入门搞硬件的话对钱包还是比太友好的，特别是刚入门时候需要买焊接用的各种设备，太贵的没必要，太便宜的又怕不好用，还有一堆需要自己踩的坑。我从零开始复刻小三角一共大概花费了六百元左右，其中大部分是用来购买焊接设备，还有元器件等也有很多冗余可以供下一次焊接使用。如果以前有硬件制作的经验的话，大概两三百元就够了。</p>
+<h1 id="正式焊接"><a href="#正式焊接" class="headerlink" title="正式焊接"></a>正式焊接</h1><p>做好充足的准备后就可以开始枯燥漫长的焊接过程了。</p>
+<p>由于之前在群里看到大家焊接时十有八九没能一次成功，总会遇到各种各样的问题，于是就开始漫长的排查。硬件的查错还不像软件一样简单，硬件的查错需要拿万用表一遍遍测量，虽然有大佬做出来的电压标示图，但也还需要有一定的电路知识基础，而且总会有一些除了常规的连锡短路与虚焊短路之外的奇奇怪怪的问题。有时候第一天查了一天错，死活查不出来，折腾到半夜后只能放弃，结果第二天板子自己就好了。类似的神奇事件在群内时有发生，出现问题的时候大伙就会讨论如何解决，但大部分问题的出现还是由于焊接的时候不够仔细，导致连锡或虚焊。</p>
+<p>因此我为了尽量避免焊接两小时，查错好几天的情况，第一次焊接就非常仔细，生怕出错。我焊接与整体的组装大概花了九个小时，虽然遇到了一些小问题，但总体上来说比较顺利，只有板子背面RGB灯返工了一次才亮。</p>
+<p>回流焊最麻烦的步骤是点好锡浆后的摆放元器件，需要一种一种对着电路用镊子慢慢摆放，不能出错。这个过程我大概花了两个多小时，非常需要耐心和控制手抖，小三角的电容电阻都是使用0603的，虽然没有0402的容阻小的离谱，但对于第一次焊接来说也是比较小的。</p>
+<p>但最重要的步骤并不是摆放元器件，而是点锡浆，这个过程虽然快，但决定了焊接的成败。每个焊点上点的锡浆需要不多不少，少了会导致虚焊，多了会连锡，但要遵循锡浆宁少勿多的原则，因为连锡比虚焊难处理多了，锡少了的话补一点再加热就行，多了的话就需要用吸锡带等工具了，非常麻烦。</p>
+<p><img src="/../img/220502_leroyTriangle/1.png" alt="1"></p>
+<p><img src="/../img/220502_leroyTriangle/2.png" alt="2"></p>
+<p><img src="/../img/220502_leroyTriangle/3.png" alt="3"></p>
+<p>我正面的焊接一次完成，烧录测试后也没有问题，此时就有点飘了，想把背面的RGB也一次焊好，毕竟背面的焊接难度和复杂度没有正面的高。于是当时点锡浆的时候就没有注意，有的焊点的锡浆点多了，当时也并没有注意，热风枪焊接完成后发现RGB灯不亮，电机不运转的问题，以为是正面MOS管的问题，换了一个MOS管还是不行，查了半天也没有解决，而且当时已经是半夜两点多了，就只能先放弃，第二天再继续。</p>
+<p>晚上睡觉时候也不甘心，一直在想到底是哪里出了问题。第二天早上八点多就爬下床继续查问题。想着是焊接了RGB之后才出现了问题，干脆把背面的元器件都拆了试试，拆了之后发现问题解决了，这时候才发现是昨天晚上飘了，着急了，锡浆点多了，导致有的电容出现连锡的情况。热风枪重新焊接后，问题完美解决，复刻成功！</p>
+<p><img src="/../img/220502_leroyTriangle/4.png" alt="4"></p>
+<h1 id="结果展示"><a href="#结果展示" class="headerlink" title="结果展示"></a>结果展示</h1><p>历经一个多月的准备以及九个多小时的焊接与组装，莱洛自平衡三角终于复刻成功了，复刻的效果还是很令人满意的，摇摆平衡的成功率很高，平衡后非常稳定，加RGB后果然视觉效果翻倍！</p>
+<p><img src="/../img/220502_leroyTriangle/5.png" alt="5"></p>
+<p>总的来说，复刻这样一个小三角即使对初学者来讲也并不难，需要注意的是要做好充足的准备，焊接过程中不能着急，要一步一步慢慢来，避免出现问题后的痛苦调试查错。</p>
+<p>祝大家复刻好玩的项目时都能顺利成功！</p>
 
       
 
@@ -212,7 +235,24 @@
 
 
 
-<div class="declare" hidden="hidden"></div>
+<div class="declare">
+  <strong>本文来源：</strong>
+  
+    青江的个人站
+  
+  <br>
+  <strong>本文链接：</strong>
+  <a rel="license" href="https://hanqingjiang.com/2022/05/02/220502_leroyTriangle/">https://hanqingjiang.com/2022/05/02/220502_leroyTriangle/</a>
+  <br>
+  <strong>版权声明：</strong>
+  本作品采用
+  <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+  进行许可。转载请注明出处！
+  
+    <br>
+    <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+  
+</div>
 
 
 <!-- 增加版权声明结束 -->
@@ -258,7 +298,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小技巧</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">复刻</a>
         		</li>
       		
 		</ul>
@@ -314,7 +354,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://hanqingjiang.com/2022/07/09/220709_CSDNarticleSaving/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://hanqingjiang.com/2022/05/02/220502_leroyTriangle/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -328,18 +368,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/07/12/220712_newMarkdown/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/07/09/220709_CSDNarticleSaving/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Win10新增右键新建Markdown文件教程
+          CSDN文章保存
         
       </div>
     </a>
   
   
-    <a href="/2022/05/02/220502_leroyTriangle/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">自平衡莱洛三角复刻记录</div>
+    <a href="/2022/02/02/220202_quotations/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">语录</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -366,7 +406,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">使用方法：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">一些问题：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BF%9D%E5%AD%98%E4%B8%BAPDF%E3%80%82%E5%B0%86%E6%89%93%E5%8D%B0%E6%9C%BA%E6%94%B9%E6%88%90%E2%80%9C%E5%8F%A6%E5%AD%98%E4%B8%BAPDF%E2%80%9D%E5%8D%B3%E5%8F%AF%E3%80%82"><span class="toc-number">2.0.1.</span> <span class="toc-text">1.保存为PDF。将打印机改成“另存为PDF”即可。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%9B%B4%E5%A4%9A%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.0.2.</span> <span class="toc-text">2.更多设置</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87"><span class="toc-number">2.</span> <span class="toc-text">前期准备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A3%E5%BC%8F%E7%84%8A%E6%8E%A5"><span class="toc-number">3.</span> <span class="toc-text">正式焊接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="toc-number">4.</span> <span class="toc-text">结果展示</span></a></li></ol>
                     </div>
                 </span>
             </div>
