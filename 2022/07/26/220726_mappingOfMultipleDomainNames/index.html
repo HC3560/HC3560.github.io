@@ -15,14 +15,14 @@
 <meta property="og:site_name" content="青江的个人站">
 <meta property="og:description" content="问题描述因为我现在拥有两个域名，.com域名打算长时间使用，.xyz域名将在2022年十一月份到期，到期后将不再使用。但在到期之前，我想将这两个域名都映射到我的博客，而一个Github Pages只能有一个CNAME文件，也就是只能设置一个域名映射，而要实现两个域名都映射到同一个Github Pages应该怎么办呢？">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://hanqingjiang.com/img/220726_mappingOfMultipleDomainNames_1.png">
-<meta property="og:image" content="https://hanqingjiang.com/img/220726_mappingOfMultipleDomainNames_2.png">
+<meta property="og:image" content="https://hanqingjiang.com/img/220726_mappingOfMultipleDomainNames/1.png">
+<meta property="og:image" content="https://hanqingjiang.com/img/220726_mappingOfMultipleDomainNames/2.png">
 <meta property="article:published_time" content="2022-07-26T14:55:48.000Z">
-<meta property="article:modified_time" content="2022-08-11T14:54:35.032Z">
+<meta property="article:modified_time" content="2023-01-04T07:16:24.095Z">
 <meta property="article:author" content="青江的个人站">
 <meta property="article:tag" content="Blog">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://hanqingjiang.com/img/220726_mappingOfMultipleDomainNames_1.png">
+<meta name="twitter:image" content="https://hanqingjiang.com/img/220726_mappingOfMultipleDomainNames/1.png">
   
     <link rel="alternative" href="/atom.xml" title="青江的个人站" type="application/atom+xml">
   
@@ -192,7 +192,7 @@
 
 <h2 id="解决方法：创建一个中转仓库"><a href="#解决方法：创建一个中转仓库" class="headerlink" title="解决方法：创建一个中转仓库"></a>解决方法：创建一个中转仓库</h2><p>我们需要在 GitHub 上再新建一个仓库，用来中转旧域名中的访问到新的域名。</p>
 <h3 id="1-新建随意名字的仓库"><a href="#1-新建随意名字的仓库" class="headerlink" title="1.新建随意名字的仓库"></a>1.新建随意名字的仓库</h3><p>我们新建一个仓库。新建的时候实际上可以无所谓命名，因为这个仓库里面不会真的有内容，多数时候访问实际上是 404 的。但我们创建它只是为了前面提到的那个 CNAME 文件，告诉 GitHub Pages 我们有两个域名而已。</p>
-<p><img src="/../img/220726_mappingOfMultipleDomainNames_1.png" alt="220726_mappingOfMultipleDomainNames_1"></p>
+<p><img src="/../img/220726_mappingOfMultipleDomainNames/1.png" alt="1"></p>
 <p>这里，我创建了一个名为 oldblog 的仓库，正常情况下，访问这个仓库 GitHub Pages 的域名前缀为 xxxxxxx.github.io&#x2F;oldblog。</p>
 <h3 id="2-为此仓库添加-GitHub-Pages-服务"><a href="#2-为此仓库添加-GitHub-Pages-服务" class="headerlink" title="2.为此仓库添加 GitHub Pages 服务"></a>2.为此仓库添加 GitHub Pages 服务</h3><p>接着，按照平时去创建 GitHub Pages 服务的方法往这个仓库提交代码。</p>
 <p>例如可以在仓库根目录放一个 <code>_config.yml</code> 文件（这是网站的配置文件），然后直接提交：</p>
@@ -205,7 +205,7 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>正在重定向……<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">language</span>=<span class="string">&quot;javascript&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">var</span> domain = <span class="string">&quot;这里填写新域名&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">var</span> current = <span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">var</span> target = current.<span class="title function_">substring</span>(current.<span class="title function_">indexOf</span>(<span class="string">&#x27;/&#x27;</span>, current.<span class="title function_">indexOf</span>(<span class="string">&#x27;:&#x27;</span>) + <span class="number">3</span>));</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span> = <span class="string">&quot;//&quot;</span> + domain + target;</span></span><br><span class="line"><span class="language-javascript">        location.<span class="property">href</span> = <span class="string">&quot;//&quot;</span> + domain + target;</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        正在重定向……</span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>现在，仓库里面是这样的：</p>
-<p><img src="/../img/220726_mappingOfMultipleDomainNames_2.png" alt="220726_mappingOfMultipleDomainNames_2"></p>
+<p><img src="/../img/220726_mappingOfMultipleDomainNames/2.png" alt="2"></p>
 <h3 id="4-配置-DNS"><a href="#4-配置-DNS" class="headerlink" title="4.配置 DNS"></a>4.配置 DNS</h3><p>最后检查你的 DNS 配置：</p>
 <ul>
 <li>旧域名 -&gt; xxxxxx.github.io</li>
@@ -505,11 +505,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">生日快乐🎂</a>
+                <a href="javascript:void(0)" class="js-tag color4">小技巧</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小技巧</a>
+                <a href="javascript:void(0)" class="js-tag color2">生日快乐🎂</a>
               </li>
              
               <li class="article-tag-list-item">
