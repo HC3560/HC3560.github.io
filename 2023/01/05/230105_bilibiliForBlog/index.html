@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://hanqingjiang.com">
-  <title>青江的个人站</title>
+  <title>为Hexo博客插入响应式Bilibili视频代码块 | 青江的个人站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="青江的个人站">
-<meta property="og:url" content="https://hanqingjiang.com/index.html">
+  <meta name="description" content="前言博客中有时候需要添加一些视频内容作为展示，一般使用上传到B站中的视频。 而仅仅将链接写在文中的方式太不优雅了，因此想要实现博客中包含一个可交互的视频播放模块的效果。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为Hexo博客插入响应式Bilibili视频代码块">
+<meta property="og:url" content="https://hanqingjiang.com/2023/01/05/230105_bilibiliForBlog/index.html">
 <meta property="og:site_name" content="青江的个人站">
+<meta property="og:description" content="前言博客中有时候需要添加一些视频内容作为展示，一般使用上传到B站中的视频。 而仅仅将链接写在文中的方式太不优雅了，因此想要实现博客中包含一个可交互的视频播放模块的效果。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hanqingjiang.com/img/230105_bilibiliForBlog/1.png">
+<meta property="article:published_time" content="2023-01-05T07:24:26.000Z">
+<meta property="article:modified_time" content="2023-01-05T08:02:50.276Z">
 <meta property="article:author" content="青江的个人站">
+<meta property="article:tag" content="Blog">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hanqingjiang.com/img/230105_bilibiliForBlog/1.png">
   
     <link rel="alternative" href="/atom.xml" title="青江的个人站" type="application/atom+xml">
   
@@ -156,16 +163,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-230105_bilibiliForBlog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-230105_bilibiliForBlog" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/01/05/230105_bilibiliForBlog/">为Hexo博客插入响应式Bilibili视频代码块</a>
+    <h1 class="article-title" itemprop="name">
+      为Hexo博客插入响应式Bilibili视频代码块
     </h1>
   
 
@@ -183,199 +188,40 @@
       
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>博客中有时候需要添加一些视频内容作为展示，一般使用上传到B站中的视频。</p>
 <p>而仅仅将链接写在文中的方式太不优雅了，因此想要实现博客中包含一个可交互的视频播放模块的效果。</p>
-        
-      
+<span id="more"></span>
 
-      <!-- 增加版权声明 -->
+<h1 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h1><p>首先需要去B站网页版视频链接的下方复制<strong>嵌入代码</strong>，以当时复刻自平衡莱洛三角的视频为例，如下图所示：</p>
+<p><img src="/../img/230105_bilibiliForBlog/1.png" alt="1"></p>
+<p>复制的内容为：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;//player.bilibili.com/player.html?aid=777262777&amp;bvid=BV1E14y1g7tG&amp;cid=951767237&amp;page=1&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">border</span>=<span class="string">&quot;0&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;no&quot;</span> <span class="attr">framespacing</span>=<span class="string">&quot;0&quot;</span> <span class="attr">allowfullscreen</span>=<span class="string">&quot;true&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+<p>在Markdown文档中直接粘贴上面的代码，Typora会自动识别为可播放视频，生成博客后也可以正常播放，效果如下：</p>
+<iframe src="//player.bilibili.com/player.html?aid=777262777&bvid=BV1E14y1g7tG&cid=951767237&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-
-<div class="declare" hidden="hidden"></div>
-
-
-<!-- 增加版权声明结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Blog</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/01/05/230105_bilibiliForBlog/">全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-230101_happyNewYear2023" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/01/01/230101_happyNewYear2023/">2023新年快乐！</a>
-    </h1>
-  
-
-        
-        <a href="/2023/01/01/230101_happyNewYear2023/" class="archive-article-date">
-  	<time datetime="2022-12-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-01</time>
-</a>
-        
-      </header>
-<div align="center" class="post-count">
-字数：476字 | 预计阅读时长：1分钟
-</div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>2023年到了，又是新的一年了！新年快乐！</p>
-<p>为期三年的疫情终于在这个冬天宣告结束了，以每个人阳一次作为结束，感觉还是挺戏剧化的。</p>
-<p>今年做了的事情还是比较多的，尝试了很多以前想做的事：</p>
-        
-      
-
-      <!-- 增加版权声明 -->
-
-
-
-<div class="declare" hidden="hidden"></div>
-
-
-<!-- 增加版权声明结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">新年快乐！</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/01/01/230101_happyNewYear2023/">全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-221216_addNotes" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/12/16/221216_addNotes/">添加学习笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2022/12/16/221216_addNotes/" class="archive-article-date">
-  	<time datetime="2022-12-16T08:52:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-16</time>
-</a>
-        
-      </header>
-<div align="center" class="post-count">
-字数：187字 | 预计阅读时长：1分钟
-</div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在Github中创建了一个 <code>Notes</code> 仓库 <a target="_blank" rel="noopener" href="https://github.com/HC3560/Notes">HC3560&#x2F;Notes (github.com)</a></p>
-<p>这个仓库用来存放我学习过程中写的一些代码和笔记，作为一个记录</p>
-<p>在需要时可以快速查看，也希望可以帮到大家</p>
-<p>本鸽子会尽量不定时更新……</p>
-<blockquote>
-<p>已添加笔记记录：</p>
+<p>然而用上面的代码生成博客后视频的效果不太好，因为外链HTML没有与Hexo适配，在网页上打开后，播放器界面靠左，而且窗口很小，并不优雅。</p>
+<p>可以通过如下两个操作来修改播放器样式，使得视频播放更优雅：</p>
 <ul>
-<li>2022-12-15 添加《开源硬件实战》课程代码与笔记</li>
-<li>2022-12-15 添加FPGA课程代码与笔记</li>
-<li>2022-12-17 添加Java学习代码（Frank讲师Java课程）<ul>
-<li><a target="_blank" rel="noopener" href="https://www.yuque.com/frank-93a7b/fuck/rzkdm0">走进面向对象：Java与生活 (yuque.com)</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.yuque.com/frank-93a7b/fuck/wgctzt">面向对象大胆向前！Java API 实战 (yuque.com)</a></li>
-</ul>
+<li><p>B站默认的嵌入代码是一个<code>iframe</code>，在<code>iframe</code>中添加<code>css</code>样式：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">style=&quot;position: absolute; width: 100%; height: 100%; Left: 0; top: 0;&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li>2022-12-29 添加Android学习代码与笔记<ul>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Rt411e76H/">【天哥】Android开发视频教程最新版 Android Studio开发_哔哩哔哩_bilibili</a></li>
-</ul>
+<li><p>在原来的<code>iframe</code>外面嵌套一层<code>div</code>，div添加样式：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">style=&quot;position: relative; width: 100%; height: 0; padding-bottom: 75%;&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>视频默认清晰度显示为360P，为改变默认播放清晰度，可以在<code>src</code>双引号中的内容最后添加<code>&amp;high_quality=1</code>，可以改变视频播放时默认显示的视频清晰度。</p>
+<blockquote>
+<p>现在往<code>iframe</code>里面加<code>&amp;high_quality=1</code>这个参数已经没办法调用高清晰度的b站外链视频了。</p>
+<p>加了这个参数之后，外链播放器上可能还会显示当前的视频清晰度是“720P”，但是目测实际上播放的视频只有最低的360P清晰度，也就是说上面显示的那个“720P”是假的。而且加了参数后外链播放器还无法切换到任意清晰度，一切换会显示“切换失败”或导致视频无法播放。</p>
+<p>目前没有找到替代的方法，看后续这个BUG会不会被修复。</p>
+</blockquote>
 </li>
 </ul>
-</blockquote>
+<p>代码修改后如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;position: relative; width: 100%; height: 0; padding-bottom: 75%;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;//player.bilibili.com/player.html?aid=777262777&amp;bvid=BV1E14y1g7tG&amp;cid=951767237&amp;page=1&amp;high_quality=1&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;no&quot;</span> <span class="attr">border</span>=<span class="string">&quot;0&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;no&quot;</span> <span class="attr">framespacing</span>=<span class="string">&quot;0&quot;</span> <span class="attr">allowfullscreen</span>=<span class="string">&quot;true&quot;</span> <span class="attr">style</span>=<span class="string">&quot;position: absolute; width: 100%; height: 100%; Left: 0; top: 0;&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果你也想在Hexo博客中插入响应式Bilibili视频代码块，可以直接复制上面这段代码，将其中的<code>src</code>双引号中<code>&amp;high_quality=1</code>前的内容替换为第一步复制的嵌入中<code>src</code>中的内容，然后粘贴到Markdown文件中即可。</p>
+<p>不过粘贴上面的代码时在Typora中并不能直接进行播放，会而用Hexo推送后博客中可以正常播放，效果如下：</p>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
+<iframe src="//player.bilibili.com/player.html?aid=777262777&bvid=BV1E14y1g7tG&cid=951767237&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; Left: 0; top: 0;" ></iframe></div>
 
       
 
@@ -383,97 +229,59 @@
 
 
 
-<div class="declare" hidden="hidden"></div>
-
-
-<!-- 增加版权声明结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/12/16/221216_addNotes/">全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
+<div class="declare">
+  <strong>本文来源：</strong>
   
-    <article id="post-220726_mappingOfMultipleDomainNames" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    青江的个人站
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/07/26/220726_mappingOfMultipleDomainNames/">多个域名映射同一个Github Pages</a>
-    </h1>
+  <br>
+  <strong>本文链接：</strong>
+  <a rel="license" href="https://hanqingjiang.com/2023/01/05/230105_bilibiliForBlog/">https://hanqingjiang.com/2023/01/05/230105_bilibiliForBlog/</a>
+  <br>
+  <strong>版权声明：</strong>
+  本作品采用
+  <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+  进行许可。转载请注明出处！
   
-
-        
-        <a href="/2022/07/26/220726_mappingOfMultipleDomainNames/" class="archive-article-date">
-  	<time datetime="2022-07-26T14:55:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-26</time>
-</a>
-        
-      </header>
-<div align="center" class="post-count">
-字数：910字 | 预计阅读时长：3分钟
+    <br>
+    <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+  
 </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>因为我现在拥有两个域名，<code>.com</code>域名打算长时间使用，<code>.xyz</code>域名将在2022年十一月份到期，到期后将不再使用。但在到期之前，我想将这两个域名都映射到我的博客，而一个Github Pages只能有一个<code>CNAME</code>文件，也就是只能设置一个域名映射，而要实现两个域名都映射到同一个Github Pages应该怎么办呢？</p>
-        
-      
-
-      <!-- 增加版权声明 -->
-
-
-
-<div class="declare" hidden="hidden"></div>
 
 
 <!-- 增加版权声明结束 -->
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我喝可乐~<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -493,191 +301,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/07/26/220726_mappingOfMultipleDomainNames/">全文 >></a>
-        </p>
-      
 
       
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
         
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-220722_duplicateGithubPageDomainName" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/07/22/220722_duplicateGithubPageDomainName/">Github Page域名重复问题解决</a>
-    </h1>
-  
-
-        
-        <a href="/2022/07/22/220722_duplicateGithubPageDomainName/" class="archive-article-date">
-  	<time datetime="2022-07-22T13:51:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-22</time>
-</a>
-        
-      </header>
-<div align="center" class="post-count">
-字数：991字 | 预计阅读时长：4分钟
+      </div>
+    </span>
+  </div>
 </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在Github Page中绑定自定义域名时，提示以下信息：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">The CNAME xxxxxx is already taken. </span><br><span class="line">Check out https://help.github.com/articles/troubleshooting-custom-domains/#cname-already-taken for more information.</span><br></pre></td></tr></table></figure>
-        
-      
 
-      <!-- 增加版权声明 -->
-
-
-
-<div class="declare" hidden="hidden"></div>
-
-
-<!-- 增加版权声明结束 -->
-
-      
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://hanqingjiang.com/2023/01/05/230105_bilibiliForBlog/" alt="微信分享二维码">
     </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Blog</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/07/22/220722_duplicateGithubPageDomainName/">全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-220720_aliYunSale" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/07/20/220720_aliYunSale/">阿里云域名注册后还显示在一口价售卖的问题</a>
-    </h1>
-  
-
-        
-        <a href="/2022/07/20/220720_aliYunSale/" class="archive-article-date">
-  	<time datetime="2022-07-20T15:03:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-20</time>
-</a>
-        
-      </header>
-<div align="center" class="post-count">
-字数：581字 | 预计阅读时长：1分钟
 </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我在搭建博客过程中遇到并解决过一些问题，这个<code>Blog</code>的<code>tag</code>会将问题问题和解决方法写下来，作为记录，也希望能帮到有类似问题的人。</p>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>我在阿里云万网域名注册平台上注册此<code>hanqingjiang.com</code>域名后，再次查询，发现我已经注册成功的这个域名正在以一口价的方式售卖，价格标注为1640元，点开后，显示域名一口价的发布方为“阿里云合作伙伴”，但是我经过在域名控制台里查询，并没有发现我有此域名售卖的记录。</p>
-<p>我注册成功的域名被阿里云强制售卖了？？？</p>
-        
-      
 
-      <!-- 增加版权声明 -->
-
-
-
-<div class="declare" hidden="hidden"></div>
-
-
-<!-- 增加版权声明结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Blog</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/07/20/220720_aliYunSale/">全文 >></a>
-        </p>
-      
-
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2023/01/01/230101_happyNewYear2023/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2023新年快乐！</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -692,380 +384,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-220712_newMarkdown" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/07/12/220712_newMarkdown/">Win10新增右键新建Markdown文件教程</a>
-    </h1>
-  
-
-        
-        <a href="/2022/07/12/220712_newMarkdown/" class="archive-article-date">
-  	<time datetime="2022-07-12T14:48:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-12</time>
-</a>
-        
-      </header>
-<div align="center" class="post-count">
-字数：596字 | 预计阅读时长：2分钟
-</div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Typora是一个非常好用且极其优雅的Markdown编辑器，但新建文件的时候可能需要先新建一个其他类型的文件，然后将后缀改为<code>.md</code>，比较麻烦。可以通过以下方法将右键菜单<code>新建</code>的选项中添加Markdown文件。</p>
-        
-      
-
-      <!-- 增加版权声明 -->
-
-
-
-<div class="declare" hidden="hidden"></div>
-
-
-<!-- 增加版权声明结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小技巧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/07/12/220712_newMarkdown/">全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">实现方式</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-220709_CSDNarticleSaving" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/07/09/220709_CSDNarticleSaving/">CSDN文章保存</a>
-    </h1>
-  
-
-        
-        <a href="/2022/07/09/220709_CSDNarticleSaving/" class="archive-article-date">
-  	<time datetime="2022-07-09T13:35:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
-</a>
-        
-      </header>
-<div align="center" class="post-count">
-字数：328字 | 预计阅读时长：1分钟
-</div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>想要保存CSDN里面的文章，可以通过以下方法直接将文章保存为PDF并输出，输出结果简洁，阅读舒适，效果非常好。</p>
-        
-      
-
-      <!-- 增加版权声明 -->
-
-
-
-<div class="declare" hidden="hidden"></div>
-
-
-<!-- 增加版权声明结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小技巧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/07/09/220709_CSDNarticleSaving/">全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-220502_leroyTriangle" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/05/02/220502_leroyTriangle/">自平衡莱洛三角复刻记录</a>
-    </h1>
-  
-
-        
-        <a href="/2022/05/02/220502_leroyTriangle/" class="archive-article-date">
-  	<time datetime="2022-05-02T12:54:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-02</time>
-</a>
-        
-      </header>
-<div align="center" class="post-count">
-字数：2.6k字 | 预计阅读时长：8分钟
-</div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>前段时间在b站上看到自平衡莱洛三角的视频：</p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV19v411n7mN/">基于LQR控制器的自平衡莱洛三角形_哔哩哔哩_bilibili</a></p>
-<p>以及45°大佬的复刻视频：</p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1b3411x7za/">【开源】百元内可自制的自平衡莱洛三角形_哔哩哔哩_bilibili</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ei4y1r7Rv/">【开源】自平衡莱洛三角形V2 | 我加了RGB性能翻倍_哔哩哔哩_bilibili</a></p>
-<p>于是突然就有了自己也想拥有一个的想法，这样一个神奇的，还带炫酷RGB的玩意哪个男孩看了不会心动呢！</p>
-<p>对不起了钱包，我真的需要这个酷酷的东西！！！</p>
-        
-      
-
-      <!-- 增加版权声明 -->
-
-
-
-<div class="declare" hidden="hidden"></div>
-
-
-<!-- 增加版权声明结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">复刻</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/05/02/220502_leroyTriangle/">全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-220202_quotations" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/02/02/220202_quotations/">语录</a>
-    </h1>
-  
-
-        
-        <a href="/2022/02/02/220202_quotations/" class="archive-article-date">
-  	<time datetime="2022-02-02T14:23:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-02</time>
-</a>
-        
-      </header>
-<div align="center" class="post-count">
-字数：554字 | 预计阅读时长：1分钟
-</div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>每个人都会在生活中听到或看到一些话语，这些话语有的让人印象深刻，有的可以引发深思。</p>
-<p>这篇文章用于记录一些让我感受比较深刻的话语，如果后续有新建其他收藏话语的文章，我也会将它放在<code>语录</code>这一<code>tag</code>下。希望它们同样可以感染到你！</p>
-<h3 id="稚晖语录"><a href="#稚晖语录" class="headerlink" title="稚晖语录"></a>稚晖语录</h3><blockquote>
-<p>唯有爱与科技不可辜负。	——稚晖君</p>
-</blockquote>
-<p>^ 出自稚晖的个人站的右下脚注：<a target="_blank" rel="noopener" href="http://www.pengzhihui.com/">http://www.pengzhihui.com/</a></p>
-<blockquote>
-<p>十年饮冰，难凉热血。	——稚晖君</p>
-</blockquote>
-<p>^ 出自稚晖的个人站的“格言”部分：<a target="_blank" rel="noopener" href="http://www.pengzhihui.com/">http://www.pengzhihui.com/</a></p>
-<blockquote>
-<p>不要温和地走进那个良夜，保持热爱，奔赴星海！	——稚晖君</p>
-</blockquote>
-<p>^ 出自稚晖君央视演讲“保持热爱，奔赴星海”：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1cr4y1U7EC/">https://www.bilibili.com/video/BV1cr4y1U7EC/</a></p>
-        
-      
-
-      <!-- 增加版权声明 -->
-
-
-
-<div class="declare" hidden="hidden"></div>
-
-
-<!-- 增加版权声明结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">语录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/02/02/220202_quotations/">全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -1090,8 +434,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
