@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="https://hanqingjiang.com">
   <title>自平衡莱洛三角复刻记录 | 青江的个人站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言前段时间在b站上看到自平衡莱洛三角的视频： 基于LQR控制器的自平衡莱洛三角形_哔哩哔哩_bilibili 以及45°大佬的复刻视频： 【开源】百元内可自制的自平衡莱洛三角形_哔哩哔哩_bilibili 【开源】自平衡莱洛三角形V2 | 我加了RGB性能翻倍_哔哩哔哩_bilibili 于是突然就有了自己也想拥有一个的想法，这样一个神奇的，还带炫酷RGB的玩意哪个男孩看了不会心动呢！ 对不起了">
+  <meta name="description" content="前言 前段时间在B站上看到自平衡莱洛三角的视频： 基于LQR控制器的自平衡莱洛三角形_哔哩哔哩_bilibili 以及45°大佬的开源复刻视频： 【开源】百元内可自制的自平衡莱洛三角形_哔哩哔哩_bilibili 【开源】自平衡莱洛三角形V2 | 我加了RGB性能翻倍_哔哩哔哩_bilibili 于是突然就有了自己也想拥有一个的想法，这样一个神奇的，还带炫酷RGB的玩意哪个男孩看了不会心动呢！ 对">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自平衡莱洛三角复刻记录">
 <meta property="og:url" content="https://hanqingjiang.com/2022/05/02/220502_leroyTriangle/index.html">
 <meta property="og:site_name" content="青江的个人站">
-<meta property="og:description" content="前言前段时间在b站上看到自平衡莱洛三角的视频： 基于LQR控制器的自平衡莱洛三角形_哔哩哔哩_bilibili 以及45°大佬的复刻视频： 【开源】百元内可自制的自平衡莱洛三角形_哔哩哔哩_bilibili 【开源】自平衡莱洛三角形V2 | 我加了RGB性能翻倍_哔哩哔哩_bilibili 于是突然就有了自己也想拥有一个的想法，这样一个神奇的，还带炫酷RGB的玩意哪个男孩看了不会心动呢！ 对不起了">
+<meta property="og:description" content="前言 前段时间在B站上看到自平衡莱洛三角的视频： 基于LQR控制器的自平衡莱洛三角形_哔哩哔哩_bilibili 以及45°大佬的开源复刻视频： 【开源】百元内可自制的自平衡莱洛三角形_哔哩哔哩_bilibili 【开源】自平衡莱洛三角形V2 | 我加了RGB性能翻倍_哔哩哔哩_bilibili 于是突然就有了自己也想拥有一个的想法，这样一个神奇的，还带炫酷RGB的玩意哪个男孩看了不会心动呢！ 对">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://hanqingjiang.com/img/220502_leroyTriangle/1.png">
 <meta property="og:image" content="https://hanqingjiang.com/img/220502_leroyTriangle/2.png">
@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://hanqingjiang.com/img/220502_leroyTriangle/4.png">
 <meta property="og:image" content="https://hanqingjiang.com/img/220502_leroyTriangle/5.png">
 <meta property="article:published_time" content="2022-05-02T12:54:32.000Z">
-<meta property="article:modified_time" content="2023-01-07T14:47:00.261Z">
+<meta property="article:modified_time" content="2023-01-09T03:33:04.888Z">
 <meta property="article:author" content="青江的个人站">
 <meta property="article:tag" content="复刻">
 <meta name="twitter:card" content="summary">
@@ -201,21 +201,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>前段时间在b站上看到自平衡莱洛三角的视频：</p>
+        <h1>前言</h1>
+<p>前段时间在B站上看到自平衡莱洛三角的视频：</p>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV19v411n7mN/">基于LQR控制器的自平衡莱洛三角形_哔哩哔哩_bilibili</a></p>
-<p>以及45°大佬的复刻视频：</p>
+<p>以及45°大佬的开源复刻视频：</p>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1b3411x7za/">【开源】百元内可自制的自平衡莱洛三角形_哔哩哔哩_bilibili</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ei4y1r7Rv/">【开源】自平衡莱洛三角形V2 | 我加了RGB性能翻倍_哔哩哔哩_bilibili</a></p>
 <p>于是突然就有了自己也想拥有一个的想法，这样一个神奇的，还带炫酷RGB的玩意哪个男孩看了不会心动呢！</p>
 <p>对不起了钱包，我真的需要这个酷酷的东西！！！</p>
 <span id="more"></span>
-
-<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><p>前期的准备工作还是比较漫长的，大概花了一个多月的时间。我在此之前几乎没有接触过焊接，也没有进入学校的实验室，因此焊接所需要的设备与材料都需要从零开始准备，需要了解学习的相关知识也比较多且杂。</p>
+<h1>前期准备</h1>
+<p>前期的准备工作还是比较漫长的，大概花了一个多月的时间。我在此之前几乎没有接触过焊接，也没有进入学校的实验室，因此焊接所需要的设备与材料都需要从零开始准备，需要了解学习的相关知识也比较多且杂。</p>
 <p>不过幸运的是，45°大佬将复现后的三角开源，并建立了交流群，里面有很多电子爱好者回答初学者的各种问题，对复刻有很大的帮助，群文件里面也有大佬们编写整理的很详细的硬件学习资料与小三角制作的教程，让很多初学者的学习过程有了指引，制作时候通过仔细阅读文档也可以避免踩到很多坑。</p>
 <p>这次复刻的是45°大佬的莱洛三角形V2开源方案，其中涉及到的软硬件相关知识以后再慢慢学习。</p>
 <p><a target="_blank" rel="noopener" href="https://oshwhub.com/45coll/zi-ping-heng-di-lai-luo-san-jiao_10-10-ban-ben_copy">莱洛三角V2-esp32-无刷驱动EG2133 - 嘉立创EDA开源硬件平台 (oshwhub.com)</a></p>
-<p><strong>第一个就是每天翻看群消息。</strong>有很多初学者会提很多问题，有很多大佬也会耐心地进行解答，其中一些有意义的问题我都会记录下来，万一我以后也遇到同样的问题就知道如何解决了。在大概一个月的时间里，通过每天的记录，我学到了很多相关知识，对于后面的焊接物料与设备的购买更加熟悉，对实际焊接与组装也了解了很多技巧与需要注意的地方。</p>
-<p><strong>第二个就是复刻涉及到的物料准备。</strong>包括PCB板、元器件、连接件、无刷电机、螺丝螺母等，这些参照群文件里的详细的物料表与BOM表即可。总的来说，搞硬件还是比较麻烦的，除了需要学习各种细碎的硬件知识和技能，还得时刻关注硬件市场，找到合适的购买时机。像元器件的价格与库存数量每天就在不断的变化，比如在立创商城购买元器件，很有可能今天这个元器件缺货，明天那个元器件缺货，这种时候还需要在淘宝上找替代品，有时候淘宝上元器件的质量也没办法保证，不过熟悉了之后就会得心应手了。</p>
+<p>**第一个就是每天翻看群消息。**有很多初学者会提很多问题，有很多大佬也会耐心地进行解答，其中一些有意义的问题我都会记录下来，万一我以后也遇到同样的问题就知道如何解决了。在大概一个月的时间里，通过每天的记录，我学到了很多相关知识，对于后面的焊接物料与设备的购买更加熟悉，对实际焊接与组装也了解了很多技巧与需要注意的地方。</p>
+<p>**第二个就是复刻涉及到的物料准备。**包括PCB板、元器件、连接件、无刷电机、螺丝螺母等，这些参照群文件里的详细的物料表与BOM表即可。总的来说，搞硬件还是比较麻烦的，除了需要学习各种细碎的硬件知识和技能，还得时刻关注硬件市场，找到合适的购买时机。像元器件的价格与库存数量每天就在不断的变化，比如在立创商城购买元器件，很有可能今天这个元器件缺货，明天那个元器件缺货，这种时候还需要在淘宝上找替代品，有时候淘宝上元器件的质量也没办法保证，不过熟悉了之后就会得心应手了。</p>
 <blockquote>
 <p>后续补充：我使用的电机方案是原方案的2715电机，当时还能勉强以十几元的价格买到。</p>
 <p>原V2方案使用的2715电机性能很好，摇摆平衡的成功率非常高，但是由于群友的热情购买，而且该电机是昊翔倒闭之后流出的库存，本来就存在断货的风险，目前该电机的价格已经从10元左右涨到百元级别且不发货，属实离谱。</p>
@@ -223,26 +224,28 @@
 <p>具体实现可以参考开源链接：</p>
 <p><a target="_blank" rel="noopener" href="https://oshwhub.com/chong2/motor3205">自平衡莱洛三角形V2电机无货的解决方案 - 嘉立创EDA开源硬件平台 (oshwhub.com)</a></p>
 </blockquote>
-<p><strong>第三个是焊接所需要的设备与各种消耗品的准备。</strong>包括加热台、热风枪、电烙铁、焊锡丝、焊锡膏、助焊剂、洗板水、热熔胶、高温胶带、绝缘胶带等等，所需要的东西在群文件中虽然有一部分，但还是要根据自己的需求进行购买，需要对设备有一定的了解才会比较方便。比如加热台与热风枪不一定都需要，加热台可以一次对板子的单面进行回流焊，对单面焊接非常方便；热风枪可以对局部的地方进行加热，对局部的焊接或不能使用加热台的背面焊接比较方便，我为了焊接的方便，两个都购买了，不得不说焊接过程中确实帮了我很大的忙。</p>
+<p>**第三个是焊接所需要的设备与各种消耗品的准备。**包括加热台、热风枪、电烙铁、焊锡丝、焊锡膏、助焊剂、洗板水、热熔胶、高温胶带、绝缘胶带等等，所需要的东西在群文件中虽然有一部分，但还是要根据自己的需求进行购买，需要对设备有一定的了解才会比较方便。比如加热台与热风枪不一定都需要，加热台可以一次对板子的单面进行回流焊，对单面焊接非常方便；热风枪可以对局部的地方进行加热，对局部的焊接或不能使用加热台的背面焊接比较方便，我为了焊接的方便，两个都购买了，不得不说焊接过程中确实帮了我很大的忙。</p>
 <p>初学者要入门搞硬件的话对钱包还是比太友好的，特别是刚入门时候需要买焊接用的各种设备，太贵的没必要，太便宜的又怕不好用，还有一堆需要自己踩的坑。我从零开始复刻小三角一共大概花费了六百元左右，其中大部分是用来购买焊接设备，还有元器件等也有很多冗余可以供下一次焊接使用。如果以前有硬件制作的经验的话，大概两三百元就够了。</p>
-<h1 id="正式焊接"><a href="#正式焊接" class="headerlink" title="正式焊接"></a>正式焊接</h1><p>做好充足的准备后就可以开始同样漫长的焊接过程了。</p>
+<h1>正式焊接</h1>
+<p>做好充足的准备后就可以开始同样漫长的焊接过程了。</p>
 <p>由于之前在群里看到大家焊接时十有八九没能一次成功，总会遇到各种各样的问题，于是就开始漫长的排查。硬件的查错还不像软件一样简单，硬件的查错需要拿万用表一遍遍测量，虽然有大佬做出来的电压标示图，但也还需要有一定的电路知识基础，而且总会有一些除了常规的连锡短路与虚焊短路之外的奇奇怪怪的问题。有时候第一天查了一天错，死活查不出来，折腾到半夜后只能放弃，结果第二天板子自己就好了。类似的神奇事件在群内时有发生，出现问题的时候大伙就会讨论如何解决，但大部分问题的出现还是由于焊接的时候不够仔细，导致连锡或虚焊。</p>
 <p>因此我为了尽量避免焊接两小时，查错好几天的情况，第一次焊接就非常仔细，生怕出错。我焊接与整体的组装大概花了九个小时，虽然遇到了一些小问题，但总体上来说比较顺利，只有板子背面RGB灯返工了一次才亮。</p>
 <p>回流焊最麻烦的步骤是点好锡浆后的摆放元器件，需要一种一种对着电路用镊子慢慢摆放，不能出错。这个过程我大概花了两个多小时，非常需要耐心和控制手抖，小三角的电容电阻都是使用0603的，虽然没有0402的容阻小的离谱，但对于第一次焊接来说也是比较小的。</p>
 <p>但最重要的步骤并不是摆放元器件，而是点锡浆，这个过程虽然快，但决定了焊接的成败。每个焊点上点的锡浆需要不多不少，少了会导致虚焊，多了会连锡，但要遵循锡浆宁少勿多的原则，因为连锡比虚焊难处理多了，锡少了的话补一点再加热就行，多了的话就需要用吸锡带等工具了，非常麻烦。</p>
-<p><img src="/../img/220502_leroyTriangle/1.png" alt="1"></p>
-<p><img src="/../img/220502_leroyTriangle/2.png" alt="2"></p>
-<p><img src="/../img/220502_leroyTriangle/3.png" alt="3"></p>
+<p><img src="/../img/220502_leroyTriangle/1.png" alt="" loading="lazy"></p>
+<p><img src="/../img/220502_leroyTriangle/2.png" alt="" loading="lazy"></p>
+<p><img src="/../img/220502_leroyTriangle/3.png" alt="" loading="lazy"></p>
 <p>我正面的焊接一次完成，烧录测试后也没有问题，此时就有点飘了，想把背面的RGB也一次焊好，毕竟背面的焊接难度和复杂度没有正面的高。于是当时点锡浆的时候就没有注意，有的焊点的锡浆点多了，当时也并没有注意，热风枪焊接完成后发现RGB灯不亮，电机不运转的问题，以为是正面MOS管的问题，换了一个MOS管还是不行，查了半天也没有解决，而且当时已经是半夜两点多了，就只能先放弃，第二天再继续。</p>
 <p>晚上睡觉时候也不甘心，一直在想到底是哪里出了问题。第二天早上八点多就爬下床继续查问题。想着是焊接了RGB之后才出现了问题，干脆把背面的元器件都拆了试试，拆了之后发现问题解决了，这时候才发现是昨天晚上飘了，着急了，锡浆点多了，导致有的电容出现连锡的情况。热风枪重新焊接后，问题完美解决，复刻成功！</p>
-<p><img src="/../img/220502_leroyTriangle/4.png" alt="4"></p>
-<h1 id="结果展示"><a href="#结果展示" class="headerlink" title="结果展示"></a>结果展示</h1><p>历经一个多月的准备以及九个多小时的焊接与组装，莱洛自平衡三角终于复刻成功了，复刻的效果还是很令人满意的，摇摆平衡的成功率很高，平衡后非常稳定，加RGB后果然视觉效果翻倍！</p>
-<p><img src="/../img/220502_leroyTriangle/5.png" alt="5"></p>
+<p><img src="/../img/220502_leroyTriangle/4.png" alt="" loading="lazy"></p>
+<h1>结果展示</h1>
+<p>历经一个多月的准备以及九个多小时的焊接与组装，莱洛自平衡三角终于复刻成功了，复刻的效果还是很令人满意的，摇摆平衡的成功率很高，平衡后非常稳定，加RGB后果然视觉效果翻倍！</p>
+<p><img src="/../img/220502_leroyTriangle/5.png" alt="" loading="lazy"></p>
 <p>总的来说，复刻这样一个小三角即使对初学者来讲也并不难，需要注意的是要做好充足的准备，焊接过程中不能着急，要一步一步慢慢来，避免出现问题后的痛苦调试查错。</p>
-<h2 id="最终效果可参考视频："><a href="#最终效果可参考视频：" class="headerlink" title="最终效果可参考视频："></a>最终效果可参考视频：</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1E14y1g7tG/">自平衡莱洛三角复刻记录_哔哩哔哩_bilibili</a></p>
+<h2 id="最终效果可参考视频：">最终效果可参考视频：</h2>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1E14y1g7tG/">自平衡莱洛三角复刻记录_哔哩哔哩_bilibili</a></p>
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
 <iframe src="//player.bilibili.com/player.html?aid=777262777&bvid=BV1E14y1g7tG&cid=951767237&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; Left: 0; top: 0;" ></iframe></div>
-
 <blockquote>
 <p>此插入响应式B站视频的方式有一些BUG，导致清晰度为360P，且在此页面无法调整清晰度或调整后不起作用，想要观看更清晰的视频需要进入B站观看。</p>
 </blockquote>
@@ -425,7 +428,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87"><span class="toc-number">2.</span> <span class="toc-text">前期准备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A3%E5%BC%8F%E7%84%8A%E6%8E%A5"><span class="toc-number">3.</span> <span class="toc-text">正式焊接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="toc-number">4.</span> <span class="toc-text">结果展示</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C%E5%8F%AF%E5%8F%82%E8%80%83%E8%A7%86%E9%A2%91%EF%BC%9A"><span class="toc-number">4.1.</span> <span class="toc-text">最终效果可参考视频：</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">前期准备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">正式焊接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">结果展示</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C%E5%8F%AF%E5%8F%82%E8%80%83%E8%A7%86%E9%A2%91%EF%BC%9A"><span class="toc-number">4.1.</span> <span class="toc-text">最终效果可参考视频：</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -475,7 +478,7 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: true,
+		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
@@ -534,10 +537,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">生日快乐🎂</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小技巧</a>
               </li>
              
@@ -546,19 +545,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">语录</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">命令</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">复刻</a>
+                <a href="javascript:void(0)" class="js-tag color2">生日快乐🎂</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">语录</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">复刻</a>
               </li>
              
               <li class="article-tag-list-item">
